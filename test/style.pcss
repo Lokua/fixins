@@ -1,0 +1,237 @@
+
+$unit: 14px;
+
+$text-color: #333;
+$background-color: #ddd;
+
+$b-text-color: #ddd;
+$b-background-color: #333;
+
+body {
+  @mixin o-ab color, text-color;
+  @mixin o-ab background, background-color;
+  font-family: 'Droid Sans Mono';
+  width: 88%;
+  margin: 0 auto;
+}
+
+.fixin {
+  @mixin o-box-shadow rgba(0,0,0,0.5);
+  padding: resolve($unit*1.5);
+  margin-bottom: $unit;
+  clear: fix;
+  h4 {
+    font-size: resolve($unit*2);
+    text-align: center;
+  }
+}
+
+p {
+  padding: $unit;
+  &.p1 {
+    @mixin o-ellipsis;
+    @mixin o-emboss 2px,0.66,0.66,0.66;
+  }
+  &.p2 {
+    @mixin o-emboss (
+      top-opacity: 0.05,
+      background-opacity: 0.1
+    );
+  }
+  &.p3 {
+    @mixin o-emboss;
+  }
+}
+
+ul {
+  &.hl {
+    @mixin o-horizontal-list;
+  }
+  &.lu {
+    @mixin o-list;
+  }
+}
+
+.box {
+  @mixin o-size 128px;
+  display: inline-block;
+  margin: $unit;
+  &.b1 {
+    @mixin o-box-shadow;
+  }
+  &.b2 {
+    @mixin o-box-shadow rgba(0,0,0,0.5);
+  }
+  &.b3 {
+    @mixin o-size 256px, 128px;
+    @mixin o-box-shadow (color: rgba(0,63,0,0.4));
+    background: rgb(200,227,200);
+  }
+}
+
+@mixin o-ab body .g, border, text-color, 1px solid $$;
+
+.grid {
+  @mixin o-span;
+  height: 256px;
+  * {
+    box-sizing: border-box;
+  }
+  .g {
+    @mixin o-size 100%, 256px;
+  }
+  .g1 {
+    @mixin o-span 1;
+  }
+  .g2 {
+    @mixin o-span 2;
+  }
+  .g3 {
+    @mixin o-span 3;
+  }
+  .g4 {
+    @mixin o-span 4;
+  }
+}
+
+.a1 {
+  @mixin o-underline-on-hover;
+}
+.a2 {
+  @mixin o-underline-on-hover purple;
+}
+.a3 {
+  @mixin o-underline-on-hover (color: orange);
+}
+
+
+
+p.gold1 {
+  font-size: o-golden-ratio($unit, -2);
+  &:before {
+    content: o-str(o-golden-ratio($unit, -2));
+  }
+}
+p.gold2 {
+  font-size: o-golden-ratio($unit, 1-);
+  &:before {
+    content: o-str(o-golden-ratio($unit, 1-));
+  }
+}
+p.gold3 {
+  font-size: o-golden-ratio($unit, 1);
+  &:before {
+    content: o-str(o-golden-ratio($unit, 1));
+  }
+}
+p.gold4 {
+  font-size: o-golden-ratio($unit, 2);
+  &:before {
+    content: o-str(o-golden-ratio($unit, 2));
+  }
+}
+
+p.rand1:before {
+  content: o-str(o-random());
+}
+p.rand2:before {
+  content: o-str(o-random(300,310));
+}
+p.rand3:before {
+  content: o-str(o-random(0,1,true));
+}
+p.rand3:before {
+  content: o-str(o-random(0,1,true,true));
+}
+
+.swatches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@define-mixin swatch $class, $bg, $fg {
+  .swatch.$(class) {
+    @mixin o-size 256px;
+    flex-basis: 256px;
+    background: $bg;
+    color: $fg;
+    margin: 8px;
+    &:before {
+      content: o-str($class $bg $fg);
+    }
+  }
+}
+
+$swatch-bg: 12;
+$swatch-fg: 192;
+@mixin swatch red, o-red($swatch-bg), o-red($swatch-fg);
+@mixin swatch orange, o-orange($swatch-bg), o-orange($swatch-fg);
+@mixin swatch yellow, o-yellow($swatch-bg), o-yellow($swatch-fg);
+@mixin swatch green, o-green($swatch-bg), o-green($swatch-fg);
+@mixin swatch cyan, o-cyan($swatch-bg), o-cyan($swatch-fg);
+@mixin swatch blue, o-blue($swatch-bg), o-blue($swatch-fg);
+@mixin swatch violet, o-violet($swatch-bg), o-violet($swatch-fg);
+@mixin swatch magenta, o-magenta($swatch-bg), o-magenta($swatch-fg);
+@mixin swatch gray, o-gray($swatch-bg), o-gray($swatch-fg);
+
+.lerp1 {
+  color: o-lerp(rgb(0,0,127), #ff0000, 0.50);
+  background: o-lerp(#ff0000, rgb(0,0,127), 0.5);
+}
+
+.lerp2 {
+  color: o-lerp(#ff0000, rgb(0,127,255), 0.5);
+  background: o-lerp(rgb(0,127,255), #ff0000, 0.5);
+}
+
+
+$md-keys:
+  red,
+  pink,
+  purple,
+  deep-purple,
+  indigo,
+  light-blue,
+  cyan,
+  teal,
+  green,
+  light-green,
+  lime,
+  yellow,
+  amber,
+  orange,
+  deep-orange,
+  brown,
+  grey,
+  blue-gray;
+
+.c-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.c {
+  font-size: $unit*1.5;
+  text-align: center;
+  border: 12px solid black;
+}
+@each $key in $md-keys {
+  .c-$(key) {
+    background: o-mdc($key, 500);
+    color: o-mdc($key, 100);
+    border-color: o-mdc($key, 900);
+    &:after {
+      content: o-str($key);
+    }
+  }
+}
+
+@for $i from 0 to 9 {
+  .cmdc-$(i) {
+    background: o-cmdc(#ff$(i)$(i)$(i)$(i));
+  }
+}

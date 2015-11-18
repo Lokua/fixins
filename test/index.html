@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FIXINS DEMO</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="default">
+
+    <h1>FIXINS</h1>
+
+    <button>theme</button>
+
+    <section class="fixins__mixins">
+      <h2>MIXINS</h2>
+
+      <div class="fixin">
+        <h4>o-emboss (positional args) + o-ellipsis</h4>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="fixin">
+        <h4>o-emboss (named args)</h4>
+        <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="fixin">
+        <h4>o-emboss (no args)</h4>
+        <p class="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+          ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="fixin">
+        <h4>o-horizontal-list | o-hlist</h4>
+        <ul class="hl">
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+        </ul>
+      </div>
+
+      <div class="fixin">
+        <h4>o-list-unstyled | o-list</h4>
+        <ul class="lu">
+          <li>one</li>
+          <li>two</li>
+          <li>three</li>
+        </ul>
+      </div>
+
+      <div class="fixin">
+        <h4>o-minimal-box-shadow + o-size</h4>
+        <div class="box b1">box b1</div>
+        <div class="box b2">box b2</div>
+        <div class="box b3">box b3</div>
+      </div>
+
+      <div class="fixin">
+        <h4>o-span</h4>
+        <div class="grid">
+          <div class="g g1"></div>
+          <div class="g g2"></div>
+          <div class="g g3"></div>
+          <div class="g g4"></div>
+        </div>
+      </div>
+
+      <div class="fixin">
+        <h4>o-underline-on-hover</h4>
+        <a class="a1" href="#">hover me</a><br>
+        <a class="a2" href="#">hover me</a><br>
+        <a class="a3" href="#">hover me</a><br>
+      </div>
+    </section>
+
+
+
+
+
+    <section class="fixins__functions">
+      <h2>FUNCTIONS</h2>
+
+      <div class="fixin">
+        <h4>o-golden-ratio</h4>
+        <p class="gold1"></p>
+        <p class="gold2"></p>
+        <p class="gold3"></p>
+        <p class="gold4"></p>
+      </div>
+
+      <div class="fixin">
+        <h4>o-random</h4>
+        <p class="rand1"></p>
+        <p class="rand2"></p>
+        <p class="rand3"></p>
+        <p class="rand4"></p>
+      </div>
+
+      <div class="fixin">
+        <h4>(colors)</h4>
+        <div class="swatches">
+          <div class="swatch red"></div>
+          <div class="swatch orange"></div>
+          <div class="swatch yellow"></div>
+          <div class="swatch green"></div>
+          <div class="swatch cyan"></div>
+          <div class="swatch blue"></div>
+          <div class="swatch violet"></div>
+          <div class="swatch magenta"></div>
+          <div class="swatch gray"></div>
+        </div>
+      </div>
+
+      <div class="fixin">
+        <h4>o-lerp (you should not be able to see the text)</h4>
+        <p class="lerp1">lerp1<p>
+        <p class="lerp2">lerp2<p>
+      </div>
+
+      <div class="fixin">
+        <h4>o-mdc</h4>
+        <div class="c-container">
+          <div class="box c c-red"></div>
+          <div class="box c c-pink"></div>
+          <div class="box c c-purple"></div>
+          <div class="box c c-deep-purple"></div>
+          <div class="box c c-indigo"></div>
+          <div class="box c c-light-blue"></div>
+          <div class="box c c-cyan"></div>
+          <div class="box c c-teal"></div>
+          <div class="box c c-green"></div>
+          <div class="box c c-light-green"></div>
+          <div class="box c c-lime"></div>
+          <div class="box c c-yellow"></div>
+          <div class="box c c-amber"></div>
+          <div class="box c c-orange"></div>
+          <div class="box c c-deep-orange"></div>
+          <div class="box c c-brown"></div>
+          <div class="box c c-grey"></div>
+          <div class="box c c-blue-grey"></div>
+        </div>
+      </div>
+
+      <div class="fixin">
+        <h4>o-cmdc</h4>
+        <div class="c-container">
+          <div class="box c cmdc-0"></div>
+          <div class="box c cmdc-1"></div>
+          <div class="box c cmdc-2"></div>
+          <div class="box c cmdc-3"></div>
+          <div class="box c cmdc-4"></div>
+          <div class="box c cmdc-5"></div>
+          <div class="box c cmdc-6"></div>
+          <div class="box c cmdc-7"></div>
+          <div class="box c cmdc-8"></div>
+          <div class="box c cmdc-9"></div>
+        </div>
+      </div>
+
+    </section>
+
+
+  </body>
+  <script>
+    const button = document.querySelector('button');
+    const body = document.querySelector('body');
+    button.addEventListener('click', e => {
+      body.className = body.className === 'b' ? '' : 'b';
+    });
+  </script>
+</html>
