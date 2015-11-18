@@ -58,7 +58,7 @@ of how to integrate postcss plugins (this is __not__ a plugin, btw).
 
 # Overview
 
-All fixins are prefixed with `o-` as to not collide with other namespaces.
+All fixins are prefixed with `fx-` as to not collide with other namespaces.
 This practice is borrowed from the sass microlib [o-](http://github.com/Lokua/o-), where this
 project started as a separate branch.
 
@@ -68,34 +68,34 @@ consult [test/index.html](test/index.html),
 
 ## Functions
 
-+ `o-lerp` - naive color interpolation
-+ `o-mdc` - material design color accessor
-+ `o-cmdc` - get the closest material design color to passed color
-+ `o-red`
-+ `o-orange`
-+ `o-yellow`
-+ `o-green`
-+ `o-cyan`
-+ `o-blue`
-+ `o-violet`
-+ `o-magenta`
-+ `o-gray`
-+ `o-golden-ratio`
-+ `o-random` - supports integer and float values
-+ `o-str` - useful for filling `content` with variable values
++ `fx-lerp` - naive color interpolation
++ `fx-mdc` - material design color accessor
++ `fx-cmdc` - get the closest material design color to passed color
++ `fx-red`
++ `fx-orange`
++ `fx-yellow`
++ `fx-green`
++ `fx-cyan`
++ `fx-blue`
++ `fx-violet`
++ `fx-magenta`
++ `fx-gray`
++ `fx-golden-ratio`
++ `fx-random` - supports integer and float values
++ `fx-str` - useful for filling `content` with variable values
 
 ## Mixins
 
-+ `o-ab` - code two classes with alternate vars at once; useful for theming.
-+ `o-box-shadow` - opinionated and minimal
-+ `o-center` - symantic `margin 0 auto`
-+ `o-ellipsis` - too long, didn't re...
-+ `o-emboss` - this one is a dud
-+ `o-horizontal-list`
-+ `o-list-unstyled`
-+ `o-size` - width and height in one line, or simply a square
-+ `o-span` - bare bones column width specifier
-+ `o-underline-on-hover` - cheesy thing stolen from codepen
++ `fx-ab` - code two classes with alternate vars at once; useful for theming.
++ `fx-box-shadow` - opinionated and minimal
++ `fx-center` - symantic `margin 0 auto`
++ `fx-ellipsis` - too long, didn't re...
++ `fx-emboss` - this one is a dud
++ `fx-horizontal-list`
++ `fx-list-unstyled`
++ `fx-size` - width and height in one line, or simply a square
++ `fx-span` - bare bones column width specifier
++ `fx-underline-on-hover` - cheesy thing stolen from codepen
 
 More goodies to come.
 

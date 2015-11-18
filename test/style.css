@@ -32,6 +32,10 @@ body.b {
   text-align: center;
 }
 
+.fixin h6 {
+  text-align: center;
+}
+
 p {
   padding: 14px;
 }
@@ -250,16 +254,16 @@ p.gold4:before {
 }
 
 p.rand1:before {
-  content: "252";
+  content: "89";
 }
 p.rand2:before {
-  content: "305";
+  content: "306";
 }
 p.rand3:before {
-  content: "0.354400381722138840";
+  content: "0.139446740440087420";
 }
 p.rand3:before {
-  content: "0.6424515786699770";
+  content: "0.465609411764776660";
 }
 
 .swatches {
