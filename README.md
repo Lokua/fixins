@@ -24,6 +24,8 @@ const postcss = require('gulp-postcss');
 const precss = require('precss');
 const functions = require('postcss-functions');
 
+const fixins = require('fixins');
+
 // not required but certainly helps if you're
 // using precss
 const syntax = require('postcss-scss');
@@ -37,10 +39,12 @@ gulp.task('css', () => {
           extension: 'pcss'
         },
         mixins: {
+          // this is required!
           mixins: fixins.mixins
         }
       }),
       functions({
+        // this is required!
         functions: fixins.functions
       }),
     ]))
@@ -60,8 +64,7 @@ project started as a separate branch.
 
 API documentation is under way, in the meantime you can
 consult [test/index.html](test/index.html),
-[test/style.pcss](test/style.pcss), and [test/style.css](test/style.css)
-(warning - these are not pretty! don't judge me!).
+[test/style.pcss](test/style.pcss), and [test/style.css](test/style.css).
 
 ## Functions
 
