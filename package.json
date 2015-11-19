@@ -1,6 +1,6 @@
 {
   "name": "fixins",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Personal use collection of functions and mixins for use with precss and postcss-functions",
   "main": "index.js",
   "scripts": {
