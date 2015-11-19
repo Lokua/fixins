@@ -254,16 +254,16 @@ p.gold4:before {
 }
 
 p.rand1:before {
-  content: "89";
+  content: "250";
 }
 p.rand2:before {
-  content: "306";
+  content: "304";
 }
 p.rand3:before {
-  content: "0.139446740440087420";
+  content: "0.79107593202654590";
 }
 p.rand3:before {
-  content: "0.465609411764776660";
+  content: "0.0391847419540491960";
 }
 
 .swatches {

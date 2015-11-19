@@ -4,7 +4,8 @@
   "description": "Personal use collection of functions and mixins for use with precss and postcss-functions",
   "main": "index.js",
   "scripts": {
-    "test": "ava test/**/*.test.js"
+    "test": "ava test/**/*.test.js",
+    "doc": "node docs/gen"
   },
   "directories": {
     "test": "test"

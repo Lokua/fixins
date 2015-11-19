@@ -1,76 +1,3 @@
-# fixins
-
-> Personal use collection of functions and mixins for use with
-  [precss][0] and [postcss-functions][1]
-
-## Install
-
-```sh
-npm install fixins --save-dev
-```
-
-## Usage
-
-`fixins` should be required and passed into
-[precss][0] and [postcss-functions][1] options within
-a [postcss][4] plugin config.
-
-Here is an example using gulp:
-
-```js
-// ...
-const postcss = require('gulp-postcss');
-
-const precss = require('precss');
-const functions = require('postcss-functions');
-
-const fixins = require('fixins');
-
-// not required but certainly helps if you're
-// using precss
-const syntax = require('postcss-scss');
-
-gulp.task('css', () => {
-  return gulp.src('src/**/*.css')
-    .pipe(postcss([
-      precss({
-        import: {
-          // this is just my personal preference
-          extension: 'pcss'
-        },
-        mixins: {
-          // this is required!
-          mixins: fixins.mixins
-        }
-      }),
-      functions({
-        // this is required!
-        functions: fixins.functions
-      }),
-    ]))
-    .pipe(gulp.dest('build/'));
-});
-```
-
-Consult [postcss#usage][3] for a more complete overview
-of how to integrate postcss plugins (this is __not__ a plugin, btw).
-
-
-# Overview
-
-All fixins are prefixed with `fx-` as to not collide with other frameworks/collections.
-Most mixins can be called with positional or named arguments unless otherwise stated. Named arguments
-can appear in any order but must be enclosed in parenthesis. Functions __do not__ support named
-arguments, likewise their arguments are separated by commas and not wrapped in parenthesis.
-
-##### Example positional vs named arguments:
-```scss
-/* positional arguments (col and float)*/
-@mixin fx-span 3, none;
-
-/* named - col arg defaults to 12 */
-@mixin fx-span(float:right);
-```
 
 # API (Table of Contents)
 
@@ -318,70 +245,7 @@ $text-color: black;
 $b-text-color: white;
 
 
-// note the lack of `# fixins
-
-> Personal use collection of functions and mixins for use with
-  [precss][0] and [postcss-functions][1]
-
-## Install
-
-```sh
-npm install fixins --save-dev
-```
-
-## Usage
-
-`fixins` should be required and passed into
-[precss][0] and [postcss-functions][1] options within
-a [postcss][4] plugin config.
-
-Here is an example using gulp:
-
-```js
-// ...
-const postcss = require('gulp-postcss');
-
-const precss = require('precss');
-const functions = require('postcss-functions');
-
-const fixins = require('fixins');
-
-// not required but certainly helps if you're
-// using precss
-const syntax = require('postcss-scss');
-
-gulp.task('css', () => {
-  return gulp.src('src/**/*.css')
-    .pipe(postcss([
-      precss({
-        import: {
-          // this is just my personal preference
-          extension: 'pcss'
-        },
-        mixins: {
-          // this is required!
-          mixins: fixins.mixins
-        }
-      }),
-      functions({
-        // this is required!
-        functions: fixins.functions
-      }),
-    ]))
-    .pipe(gulp.dest('build/'));
-});
-```
-
-Consult [postcss#usage][3] for a more complete overview
-of how to integrate postcss plugins (this is __not__ a plugin, btw).
-
-
-# Overview
-
-All fixins are prefixed with `fx-` as to not collide with other namespaces.
-Most mixins can be called with positional or named arguments.
-
- before `text-color`
+// note the lack of `$` before `text-color`
 @mixin fx-ab .box, color, text-color;
 
 
@@ -407,70 +271,7 @@ $text-color: black;
 $b-text-color: white;
 
 
-// note the lack of `# fixins
-
-> Personal use collection of functions and mixins for use with
-  [precss][0] and [postcss-functions][1]
-
-## Install
-
-```sh
-npm install fixins --save-dev
-```
-
-## Usage
-
-`fixins` should be required and passed into
-[precss][0] and [postcss-functions][1] options within
-a [postcss][4] plugin config.
-
-Here is an example using gulp:
-
-```js
-// ...
-const postcss = require('gulp-postcss');
-
-const precss = require('precss');
-const functions = require('postcss-functions');
-
-const fixins = require('fixins');
-
-// not required but certainly helps if you're
-// using precss
-const syntax = require('postcss-scss');
-
-gulp.task('css', () => {
-  return gulp.src('src/**/*.css')
-    .pipe(postcss([
-      precss({
-        import: {
-          // this is just my personal preference
-          extension: 'pcss'
-        },
-        mixins: {
-          // this is required!
-          mixins: fixins.mixins
-        }
-      }),
-      functions({
-        // this is required!
-        functions: fixins.functions
-      }),
-    ]))
-    .pipe(gulp.dest('build/'));
-});
-```
-
-Consult [postcss#usage][3] for a more complete overview
-of how to integrate postcss plugins (this is __not__ a plugin, btw).
-
-
-# Overview
-
-All fixins are prefixed with `fx-` as to not collide with other namespaces.
-Most mixins can be called with positional or named arguments.
-
- before `text-color`
+// note the lack of `$` before `text-color`
 .box {
   .medium {
  	 @mixin fx-ab color, text-color;
@@ -500,7 +301,7 @@ Most mixins can be called with positional or named arguments.
 ```
 
 
-Using an optional template, any occurance of `$` will
+Using an optional template, any occurance of `$$` will
 be replaced with `variable`. This is useful when your variable
 is included in a multiple word value definition./
 
@@ -510,7 +311,7 @@ $color: black;
 $b-color: white;
 
 
-@mixin fx-ab .box, box-shadow, color, 0 1px 0 1px $;
+@mixin fx-ab .box, box-shadow, color, 0 1px 0 1px $$;
 
 
 // results in
@@ -526,74 +327,11 @@ $b-color: white;
 #### Params
 + `[selector]` - selector
 + `prop` - left handle property key
-+ `variable` - sass-like variable reference without the leading `# fixins
-
-> Personal use collection of functions and mixins for use with
-  [precss][0] and [postcss-functions][1]
-
-## Install
-
-```sh
-npm install fixins --save-dev
-```
-
-## Usage
-
-`fixins` should be required and passed into
-[precss][0] and [postcss-functions][1] options within
-a [postcss][4] plugin config.
-
-Here is an example using gulp:
-
-```js
-// ...
-const postcss = require('gulp-postcss');
-
-const precss = require('precss');
-const functions = require('postcss-functions');
-
-const fixins = require('fixins');
-
-// not required but certainly helps if you're
-// using precss
-const syntax = require('postcss-scss');
-
-gulp.task('css', () => {
-  return gulp.src('src/**/*.css')
-    .pipe(postcss([
-      precss({
-        import: {
-          // this is just my personal preference
-          extension: 'pcss'
-        },
-        mixins: {
-          // this is required!
-          mixins: fixins.mixins
-        }
-      }),
-      functions({
-        // this is required!
-        functions: fixins.functions
-      }),
-    ]))
-    .pipe(gulp.dest('build/'));
-});
-```
-
-Consult [postcss#usage][3] for a more complete overview
-of how to integrate postcss plugins (this is __not__ a plugin, btw).
-
-
-# Overview
-
-All fixins are prefixed with `fx-` as to not collide with other namespaces.
-Most mixins can be called with positional or named arguments.
-
-.
++ `variable` - sass-like variable reference without the leading `$`.
 Passing `foo` is read internally as "use $foo and $b-foo".
 If no reference to $foo or $b-foo is found, foo and b-foo literals will be output.
 + `[template]` - text sequence to use as the right-hand value with
-any occurance of `$` replaced with `variable` results.
+any occurance of `$$` replaced with `variable` results.
 ***
 
 <a name="fx-box-shadow">
@@ -676,17 +414,3 @@ If using with an `a` element, be sure to set
 `text-decoration: none;` on the element and its `:hover`.
 Credit goes to someone on Codepen, but somehow I misplaced the
 link to that work... will update here when found. Thanks, whoever you are!
-
-
-***
-
-More goodies to come.
-
-## License
-[MIT][2]
-
-[0]: https://github.com/jonathantneal/precss
-[1]: https://github.com/andyjansson/postcss-functions
-[2]: http://lokua.net/license-mit.html
-[3]: https://github.com/postcss/postcss#usage
-[4]: https://github.com/postcss/postcss
