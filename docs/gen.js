@@ -71,7 +71,7 @@ function parseComments(code) {
             }
             names.push(aname);
           };
-          line = `\n<a name="${aname}">\n${line}</a>\n`;
+          line = `\n<a name="${aname}" style="font-size:22px;color:cornflowerblue">\n${line}\n</a>\n`;
         }
         if (line === '*') line = '\n';
         doc.push(line);

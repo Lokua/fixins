@@ -99,6 +99,7 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
 
 
 
+
 # API (Table of Contents)
 
 + Functions
@@ -126,8 +127,9 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
 ## Functions
 
 
-<a name="fx-lerp">
-### `fx-lerp(color, color, [factor=0.5])`</a>
+<a name="fx-lerp" style="font-size:22px;color:cornflowerblue">
+### `fx-lerp(color, color, [factor=0.5])`
+</a>
 
 
 
@@ -156,8 +158,9 @@ rgba(128,0,128,0.5)
 
 ***
 
-<a name="fx-md-color">
-### `fx-md-color(color1, [shade=500], [alpha])`</a>
+<a name="fx-md-color" style="font-size:22px;color:cornflowerblue">
+### `fx-md-color(color1, [shade=500], [alpha])`
+</a>
 
 
 
@@ -198,8 +201,9 @@ rgba(244, 67, 54, 0.5)
 
 ***
 
-<a name="fx-closest-md-color">
-### `fx-closest-md-color(color)`</a>
+<a name="fx-closest-md-color" style="font-size:22px;color:cornflowerblue">
+### `fx-closest-md-color(color)`
+</a>
 
 
 
@@ -222,8 +226,9 @@ Find the material design color that is closest to `color`.
 
 ***
 
-<a name="fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray">
-### `fx-<red|orange|yellow|green|cyan|blue|violet|magenta|gray>(value, [alpha=1])`</a>
+<a name="fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray" style="font-size:22px;color:cornflowerblue">
+### `fx-<red|orange|yellow|green|cyan|blue|violet|magenta|gray>(value, [alpha=1])`
+</a>
 
 
 
@@ -245,8 +250,9 @@ Get a shade of <color> between 0-255
 + magenta: `pink`
 ***
 
-<a name="fx-golden-ratio">
-### `fx-golden-ratio([number=100], [scale=1])`</a>
+<a name="fx-golden-ratio" style="font-size:22px;color:cornflowerblue">
+### `fx-golden-ratio([number=100], [scale=1])`
+</a>
 
 
 
@@ -277,8 +283,9 @@ fx-golden-ratio(30, -2) //=> 11.45898
 + fx-golden
 ***
 
-<a name="fx-random">
-### `fx-random ([min=0], [max=256], [float=false [, inclusive=false]])`</a>
+<a name="fx-random" style="font-size:22px;color:cornflowerblue">
+### `fx-random ([min=0], [max=256], [float=false [, inclusive=false]])`
+</a>
 
 
 
@@ -298,8 +305,9 @@ Random number generation provided by
 + a random integer or floating point number depending on the truthyness of `float`
 ***
 
-<a name="fx-str">
-### `fx-str([input])`</a>
+<a name="fx-str" style="font-size:22px;color:cornflowerblue">
+### `fx-str([input])`
+</a>
 
 
 
@@ -317,8 +325,9 @@ in css is wrapped in quotes.
 ## Mixins
 
 
-<a name="fx-ab">
-### `fx-ab([selector], prop, variable, [template])`</a>
+<a name="fx-ab" style="font-size:22px;color:cornflowerblue">
+### `fx-ab([selector], prop, variable, [template])`
+</a>
 
 
 
@@ -434,13 +443,15 @@ If no reference to $foo or $b-foo is found, foo and b-foo literals will be outpu
 any occurrence of `$$` replaced with `variable` results.
 ***
 
-<a name="fx-box-shadow">
-### `fx-box-shadow([color=rgba(0, 0, 0, 0.25)])`</a>
+<a name="fx-box-shadow" style="font-size:22px;color:cornflowerblue">
+### `fx-box-shadow([color=rgba(0, 0, 0, 0.25)])`
+</a>
 
 ***
 
-<a name="fx-center">
-### `fx-center`</a>
+<a name="fx-center" style="font-size:22px;color:cornflowerblue">
+### `fx-center`
+</a>
 
 
 
@@ -448,8 +459,9 @@ any occurrence of `$$` replaced with `variable` results.
 `margin: 0 auto;`
 ***
 
-<a name="fx-ellipsis">
-### `fx-ellipsis`</a>
+<a name="fx-ellipsis" style="font-size:22px;color:cornflowerblue">
+### `fx-ellipsis`
+</a>
 
 
 
@@ -458,8 +470,9 @@ Works best on elements with a determined height
 (not `auto` or `100%`)
 ***
 
-<a name="fx-emboss">
-### `fx-emboss([radius=0], [top-opacity=0.3], [bottom-opacity=0.25], [background-opacity=0.2])`</a>
+<a name="fx-emboss" style="font-size:22px;color:cornflowerblue">
+### `fx-emboss([radius=0], [top-opacity=0.3], [bottom-opacity=0.25], [background-opacity=0.2])`
+</a>
 
 
 
@@ -467,8 +480,9 @@ An opinionated emboss effect suitable for square containers.
 Currently only suitable for light themes.
 ***
 
-<a name="fx-horizontal-list">
-### `fx-horizontal-list`</a>
+<a name="fx-horizontal-list" style="font-size:22px;color:cornflowerblue">
+### `fx-horizontal-list`
+</a>
 
 
 
@@ -477,13 +491,15 @@ is meant to be placed directly under a `ul|ol` or
 class placed directly on a `ul|ol`
 ***
 
-<a name="fx-list-unstyled">
-### `fx-list-unstyled`</a>
+<a name="fx-list-unstyled" style="font-size:22px;color:cornflowerblue">
+### `fx-list-unstyled`
+</a>
 
 ***
 
-<a name="fx-size">
-### `fx-size([width], [height=width])`</a>
+<a name="fx-size" style="font-size:22px;color:cornflowerblue">
+### `fx-size([width], [height=width])`
+</a>
 
 
 
@@ -493,8 +509,9 @@ Note that this mixin does not support the named
 argument syntax as that is completely redundant.
 ***
 
-<a name="fx-span">
-### `fx-span([cols=12], [float=left])`</a>
+<a name="fx-span" style="font-size:22px;color:cornflowerblue">
+### `fx-span([cols=12], [float=left])`
+</a>
 
 
 
@@ -504,8 +521,9 @@ using box-sizing:border-box on everything, wrappers for your grid classes
 and padding for inner content and things become much simpler in grid land).
 ***
 
-<a name="fx-underline-on-hover">
-### `fx-underline-on-hover([color=#000], [speed=0.3s])`</a>
+<a name="fx-underline-on-hover" style="font-size:22px;color:cornflowerblue">
+### `fx-underline-on-hover([color=#000], [speed=0.3s])`
+</a>
 
 
 
@@ -514,6 +532,7 @@ If using with an `a` element, be sure to set
 `text-decoration: none;` on the element and its `:hover`.
 Credit goes to someone on Codepen, but somehow I misplaced the
 link to that work... will update here when found. Thanks, whoever you are!
+
 
 
 
