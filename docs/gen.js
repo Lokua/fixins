@@ -31,7 +31,7 @@ paths.forEach(dirpath => fs.readdirSync(dirpath).forEach(filename => {
   }
 }));
 
-const out = `
+let out = `
 # API (Table of Contents)
 
 ${linkifyNames().join('\n')}
@@ -47,11 +47,6 @@ ${mixins.join(docDelim)}
 
 fs.writeFile(__dirname + '/docs.md', out, 'utf8', err => {
   if (!err) console.log('docs written');
-  const readmeSrc = fs.readFileSync(path.join(__dirname, '/readme-src.md'), 'utf8');
-  fs.writeFile(path.join(__dirname, '/../README.md'),
-    readmeSrc.replace('$$$', out), 'utf8', err2 => {
-      console.log('README written');
-    });
 });
 
 

@@ -301,7 +301,7 @@ $b-text-color: white;
 ```
 
 
-Using an optional template, any occurance of `$$` will
+Using an optional template, any occurrence of `$$` will
 be replaced with `variable`. This is useful when your variable
 is included in a multiple word value definition./
 
@@ -331,7 +331,7 @@ $b-color: white;
 Passing `foo` is read internally as "use $foo and $b-foo".
 If no reference to $foo or $b-foo is found, foo and b-foo literals will be output.
 + `[template]` - text sequence to use as the right-hand value with
-any occurance of `$$` replaced with `variable` results.
+any occurrence of `$$` replaced with `variable` results.
 ***
 
 <a name="fx-box-shadow">
