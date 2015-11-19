@@ -5,6 +5,8 @@ body {
   font-family: 'Droid Sans Mono';
   width: 88%;
   margin: 0 auto;
+  something: fx-golden 12;
+  something-else: 19.41640786499874;
 }
 
 body.b {
@@ -254,16 +256,16 @@ p.gold4:before {
 }
 
 p.rand1:before {
-  content: "250";
+  content: "73";
 }
 p.rand2:before {
-  content: "304";
+  content: "309";
 }
 p.rand3:before {
-  content: "0.79107593202654590";
+  content: "0.06391827656301740";
 }
 p.rand3:before {
-  content: "0.0391847419540491960";
+  content: "0.27176124652651470";
 }
 
 .swatches {

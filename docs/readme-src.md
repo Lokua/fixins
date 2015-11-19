@@ -58,14 +58,29 @@ of how to integrate postcss plugins (this is __not__ a plugin, btw).
 
 # Overview
 
-All fixins are prefixed with `fx-` as to not collide with other namespaces.
-Most mixins can be called with positional or named arguments.
+All fixins are prefixed with `fx-` as to not collide with other frameworks/collections.
+Most mixins can be called with positional or named arguments unless otherwise stated.
+Positional arguments are separated by comma and not enclosed in parenthesis, while named arguments
+can appear in any order but must be enclosed in parenthesis. Functions do not support named syntax.
+
+##### Example: positional vs named arguments:
+```scss
+/* positional arguments (col and float)*/
+@mixin fx-span 3, none;
+
+/* named - col arg defaults to 12 */
+@mixin fx-span(float:right);
+```
 
 $$$
 
 ***
 
-More goodies to come.
+## Road Map
+
+[ ] - support hsla
+[ ] - flex-box helpers
+[ ] - tighten test demo and github.io that sucker
 
 ## License
 [MIT][2]
