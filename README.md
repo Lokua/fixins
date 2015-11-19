@@ -100,6 +100,7 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
 
 
 
+
 # API (Table of Contents)
 
 + Functions
@@ -127,7 +128,7 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
 ## Functions
 
 
-<a name="fx-lerp" style="font-size:22px;color:cornflowerblue">
+<a name="fx-lerp" color="green">
 ### `fx-lerp(color, color, [factor=0.5])`
 </a>
 
@@ -158,7 +159,7 @@ rgba(128,0,128,0.5)
 
 ***
 
-<a name="fx-md-color" style="font-size:22px;color:cornflowerblue">
+<a name="fx-md-color" color="green">
 ### `fx-md-color(color1, [shade=500], [alpha])`
 </a>
 
@@ -201,7 +202,7 @@ rgba(244, 67, 54, 0.5)
 
 ***
 
-<a name="fx-closest-md-color" style="font-size:22px;color:cornflowerblue">
+<a name="fx-closest-md-color" color="green">
 ### `fx-closest-md-color(color)`
 </a>
 
@@ -226,7 +227,7 @@ Find the material design color that is closest to `color`.
 
 ***
 
-<a name="fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray" style="font-size:22px;color:cornflowerblue">
+<a name="fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray" color="green">
 ### `fx-<red|orange|yellow|green|cyan|blue|violet|magenta|gray>(value, [alpha=1])`
 </a>
 
@@ -250,7 +251,7 @@ Get a shade of <color> between 0-255
 + magenta: `pink`
 ***
 
-<a name="fx-golden-ratio" style="font-size:22px;color:cornflowerblue">
+<a name="fx-golden-ratio" color="green">
 ### `fx-golden-ratio([number=100], [scale=1])`
 </a>
 
@@ -283,7 +284,7 @@ fx-golden-ratio(30, -2) //=> 11.45898
 + fx-golden
 ***
 
-<a name="fx-random" style="font-size:22px;color:cornflowerblue">
+<a name="fx-random" color="green">
 ### `fx-random ([min=0], [max=256], [float=false [, inclusive=false]])`
 </a>
 
@@ -305,7 +306,7 @@ Random number generation provided by
 + a random integer or floating point number depending on the truthyness of `float`
 ***
 
-<a name="fx-str" style="font-size:22px;color:cornflowerblue">
+<a name="fx-str" color="green">
 ### `fx-str([input])`
 </a>
 
@@ -325,7 +326,7 @@ in css is wrapped in quotes.
 ## Mixins
 
 
-<a name="fx-ab" style="font-size:22px;color:cornflowerblue">
+<a name="fx-ab" color="green">
 ### `fx-ab([selector], prop, variable, [template])`
 </a>
 
@@ -443,13 +444,13 @@ If no reference to $foo or $b-foo is found, foo and b-foo literals will be outpu
 any occurrence of `$$` replaced with `variable` results.
 ***
 
-<a name="fx-box-shadow" style="font-size:22px;color:cornflowerblue">
+<a name="fx-box-shadow" color="green">
 ### `fx-box-shadow([color=rgba(0, 0, 0, 0.25)])`
 </a>
 
 ***
 
-<a name="fx-center" style="font-size:22px;color:cornflowerblue">
+<a name="fx-center" color="green">
 ### `fx-center`
 </a>
 
@@ -459,7 +460,7 @@ any occurrence of `$$` replaced with `variable` results.
 `margin: 0 auto;`
 ***
 
-<a name="fx-ellipsis" style="font-size:22px;color:cornflowerblue">
+<a name="fx-ellipsis" color="green">
 ### `fx-ellipsis`
 </a>
 
@@ -470,7 +471,7 @@ Works best on elements with a determined height
 (not `auto` or `100%`)
 ***
 
-<a name="fx-emboss" style="font-size:22px;color:cornflowerblue">
+<a name="fx-emboss" color="green">
 ### `fx-emboss([radius=0], [top-opacity=0.3], [bottom-opacity=0.25], [background-opacity=0.2])`
 </a>
 
@@ -480,7 +481,7 @@ An opinionated emboss effect suitable for square containers.
 Currently only suitable for light themes.
 ***
 
-<a name="fx-horizontal-list" style="font-size:22px;color:cornflowerblue">
+<a name="fx-horizontal-list" color="green">
 ### `fx-horizontal-list`
 </a>
 
@@ -491,13 +492,13 @@ is meant to be placed directly under a `ul|ol` or
 class placed directly on a `ul|ol`
 ***
 
-<a name="fx-list-unstyled" style="font-size:22px;color:cornflowerblue">
+<a name="fx-list-unstyled" color="green">
 ### `fx-list-unstyled`
 </a>
 
 ***
 
-<a name="fx-size" style="font-size:22px;color:cornflowerblue">
+<a name="fx-size" color="green">
 ### `fx-size([width], [height=width])`
 </a>
 
@@ -509,7 +510,7 @@ Note that this mixin does not support the named
 argument syntax as that is completely redundant.
 ***
 
-<a name="fx-span" style="font-size:22px;color:cornflowerblue">
+<a name="fx-span" color="green">
 ### `fx-span([cols=12], [float=left])`
 </a>
 
@@ -521,7 +522,7 @@ using box-sizing:border-box on everything, wrappers for your grid classes
 and padding for inner content and things become much simpler in grid land).
 ***
 
-<a name="fx-underline-on-hover" style="font-size:22px;color:cornflowerblue">
+<a name="fx-underline-on-hover" color="green">
 ### `fx-underline-on-hover([color=#000], [speed=0.3s])`
 </a>
 
@@ -532,6 +533,7 @@ If using with an `a` element, be sure to set
 `text-decoration: none;` on the element and its `:hover`.
 Credit goes to someone on Codepen, but somehow I misplaced the
 link to that work... will update here when found. Thanks, whoever you are!
+
 
 
 
