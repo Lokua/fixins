@@ -37,9 +37,13 @@ let out = `
 
 ${linkifyNames().join('\n')}
 
+***
+
 ## Functions
 
 ${functions.join(docDelim)}
+
+***
 
 ## Mixins
 

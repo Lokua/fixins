@@ -25,6 +25,8 @@
   + [fx-span](#a15)
   + [fx-underline-on-hover](#a16)
 
+***
+
 ## Functions
 
 
@@ -213,6 +215,8 @@ in css is wrapped in quotes.
 
 #### Return
 + "`input`"
+
+***
 
 ## Mixins
 
