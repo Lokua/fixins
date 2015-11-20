@@ -103,6 +103,7 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
 
 
 
+
 # API (Table of Contents)
 
 + Functions
@@ -128,6 +129,8 @@ can appear in any order but must be enclosed in parenthesis. Functions do not su
   + [fx-size](#a14)
   + [fx-span](#a15)
   + [fx-underline-on-hover](#a16)
+
+***
 
 ## Functions
 
@@ -317,6 +320,8 @@ in css is wrapped in quotes.
 
 #### Return
 + "`input`"
+
+***
 
 ## Mixins
 
@@ -517,6 +522,7 @@ If using with an `a` element, be sure to set
 `text-decoration: none;` on the element and its `:hover`.
 Credit goes to someone on Codepen, but somehow I misplaced the
 link to that work... will update here when found. Thanks, whoever you are!
+
 
 
 
