@@ -3,43 +3,42 @@
 
 + Functions
 
-  + [fx-lerp](#fx-lerp)
-  + [fx-md-color](#fx-md-color)
-  + [fx-closest-md-color](#fx-closest-md-color)
-  + [fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray](#fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray)
-  + [fx-golden-ratio](#fx-golden-ratio)
-  + [fx-random](#fx-random)
-  + [fx-str](#fx-str)
+  + [fx-lerp](#a0)
+  + [fx-md-color](#a1)
+  + [fx-closest-md-color](#a2)
+  + [fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray](#a3)
+  + [fx-golden-ratio](#a4)
+  + [fx-random](#a5)
+  + [fx-str](#a6)
+
+
 + Mixins
 
-  + [fx-ab](#fx-ab)
-  + [fx-box-shadow](#fx-box-shadow)
-  + [fx-center](#fx-center)
-  + [fx-ellipsis](#fx-ellipsis)
-  + [fx-emboss](#fx-emboss)
-  + [fx-horizontal-list](#fx-horizontal-list)
-  + [fx-list-unstyled](#fx-list-unstyled)
-  + [fx-size](#fx-size)
-  + [fx-span](#fx-span)
-  + [fx-underline-on-hover](#fx-underline-on-hover)
+  + [fx-ab](#a7)
+  + [fx-box-shadow](#a8)
+  + [fx-center](#a9)
+  + [fx-ellipsis](#a10)
+  + [fx-emboss](#a11)
+  + [fx-horizontal-list](#a12)
+  + [fx-list-unstyled](#a13)
+  + [fx-size](#a14)
+  + [fx-span](#a15)
+  + [fx-underline-on-hover](#a16)
 
 ## Functions
 
 
-<a name="fx-lerp" color="green">
-### `fx-lerp(color, color, [factor=0.5])`
-</a>
+## <a name="a0"></a> fx-lerp(color, color, [factor=0.5])
 
 
 
-Interpolate (blend) `color1` and `color2` by `factor`.
-The algorhythm used is simple and naive; added here
-for convenience. For more serious use, see
+Mix `color1` and `color2` by `factor`.
+The algorithm used is pretty basic. For more serious use, see
 [postcss-color-mix](https://github.com/iamstarkov/postcss-color-mix)
 
 
 #### Example
-```
+```scss
 // input
 fx-lerp(#ff0000, rgb(0,0,255,0))
 // output
@@ -55,11 +54,10 @@ rgba(128,0,128,0.5)
 + CSS rgba color
 
 
+
 ***
 
-<a name="fx-md-color" color="green">
-### `fx-md-color(color1, [shade=500], [alpha])`
-</a>
+## <a name="a1"></a> fx-md-color(color1, [shade=500], [alpha])
 
 
 
@@ -67,7 +65,7 @@ Material design colors accessor
 
 
 #### Example
-```
+```scss
 // input
 fx-md(red, 500)
 // output
@@ -83,9 +81,9 @@ rgba(244, 67, 54, 0.5)
 
 
 #### Params
-+ color - material design color name
-+ shade - material design color shade
-+ [alpha=1] - range [0 1]
++ `color` - material design color name
++ `shade` - material design color shade
++ `[alpha=1]` - range [0 1]
 
 
 #### Return
@@ -98,11 +96,10 @@ rgba(244, 67, 54, 0.5)
 + `fx-md`
 
 
+
 ***
 
-<a name="fx-closest-md-color" color="green">
-### `fx-closest-md-color(color)`
-</a>
+## <a name="a2"></a> fx-closest-md-color(color)
 
 
 
@@ -110,7 +107,7 @@ Find the material design color that is closest to `color`.
 
 
 #### Params
-+ color - CSS hex color
++ `color` - CSS hex color
 
 
 #### Return
@@ -123,11 +120,10 @@ Find the material design color that is closest to `color`.
 + `fx-closest`
 
 
+
 ***
 
-<a name="fx-red|orange|yellow|green|cyan|blue|violet|magenta|gray" color="green">
-### `fx-<red|orange|yellow|green|cyan|blue|violet|magenta|gray>(value, [alpha=1])`
-</a>
+## <a name="a3"></a> fx-<red|orange|yellow|green|cyan|blue|violet|magenta|gray>(value, [alpha=1])
 
 
 
@@ -147,11 +143,10 @@ Get a shade of <color> between 0-255
 + gray: `grayscale`, `gray-scale`, and for you britts: `grey`, `greyscale`, `grey-scale`
 + violet: `purple`
 + magenta: `pink`
+
 ***
 
-<a name="fx-golden-ratio" color="green">
-### `fx-golden-ratio([number=100], [scale=1])`
-</a>
+## <a name="a4"></a> fx-golden-ratio([number=100], [scale=1])
 
 
 
@@ -161,7 +156,7 @@ the smaller portion.
 
 
 #### Example
-```css
+```scss
 fx-golden-ratio(30,  1) //=> 48.54102
 fx-golden-ratio(30,  2) //=> 78.54102
 fx-golden-ratio(30, -1) //=> 18.54102
@@ -180,11 +175,10 @@ fx-golden-ratio(30, -2) //=> 11.45898
 
 ##### Alias
 + fx-golden
+
 ***
 
-<a name="fx-random" color="green">
-### `fx-random ([min=0], [max=256], [float=false [, inclusive=false]])`
-</a>
+## <a name="a5"></a> fx-random ([min=0], [max=256], [float=false [, inclusive=false]])
 
 
 
@@ -202,11 +196,10 @@ Random number generation provided by
 
 #### Return
 + a random integer or floating point number depending on the truthyness of `float`
+
 ***
 
-<a name="fx-str" color="green">
-### `fx-str([input])`
-</a>
+## <a name="a6"></a> fx-str([input])
 
 
 
@@ -224,9 +217,7 @@ in css is wrapped in quotes.
 ## Mixins
 
 
-<a name="fx-ab" color="green">
-### `fx-ab([selector], prop, variable, [template])`
-</a>
+## <a name="a7"></a> fx-ab([selector], prop, variable, [template])
 
 
 
@@ -247,7 +238,7 @@ In this context, `.b` is appended to the parent-most
 
 
 #### Example
-```
+```scss
 // given input ...
 $text-color: black;
 $b-text-color: white;
@@ -273,7 +264,7 @@ The `.b` class will be appended to the child-most
 
 
 #### Example
-```
+```scss
 // input
 $text-color: black;
 $b-text-color: white;
@@ -314,7 +305,7 @@ be replaced with `variable`. This is useful when your variable
 is included in a multiple word value definition./
 
 
-```
+```scss
 $color: black;
 $b-color: white;
 
@@ -340,65 +331,58 @@ Passing `foo` is read internally as "use $foo and $b-foo".
 If no reference to $foo or $b-foo is found, foo and b-foo literals will be output.
 + `[template]` - text sequence to use as the right-hand value with
 any occurrence of `$$` replaced with `variable` results.
-***
-
-<a name="fx-box-shadow" color="green">
-### `fx-box-shadow([color=rgba(0, 0, 0, 0.25)])`
-</a>
 
 ***
 
-<a name="fx-center" color="green">
-### `fx-center`
-</a>
+## <a name="a8"></a> fx-box-shadow([color=rgba(0, 0, 0, 0.25)])
+
+
+***
+
+## <a name="a9"></a> fx-center
 
 
 
 #### Return
 `margin: 0 auto;`
+
 ***
 
-<a name="fx-ellipsis" color="green">
-### `fx-ellipsis`
-</a>
+## <a name="a10"></a> fx-ellipsis
 
 
 
 Truncate text with an ellipsis `...`.
 Works best on elements with a determined height
 (not `auto` or `100%`)
+
 ***
 
-<a name="fx-emboss" color="green">
-### `fx-emboss([radius=0], [top-opacity=0.3], [bottom-opacity=0.25], [background-opacity=0.2])`
-</a>
+## <a name="a11"></a> fx-emboss([radius=0], [top-opacity=0.3], [bottom-opacity=0.25], [background-opacity=0.2])
 
 
 
 An opinionated emboss effect suitable for square containers.
 Currently only suitable for light themes.
+
 ***
 
-<a name="fx-horizontal-list" color="green">
-### `fx-horizontal-list`
-</a>
+## <a name="a12"></a> fx-horizontal-list
 
 
 
 Bare bones horizontal list. Note that this mixin
 is meant to be placed directly under a `ul|ol` or
 class placed directly on a `ul|ol`
-***
-
-<a name="fx-list-unstyled" color="green">
-### `fx-list-unstyled`
-</a>
 
 ***
 
-<a name="fx-size" color="green">
-### `fx-size([width], [height=width])`
-</a>
+## <a name="a13"></a> fx-list-unstyled
+
+
+***
+
+## <a name="a14"></a> fx-size([width], [height=width])
 
 
 
@@ -406,11 +390,10 @@ Width and height together in one line.
 Called with 1 arg, height will mimick width (output square).
 Note that this mixin does not support the named
 argument syntax as that is completely redundant.
+
 ***
 
-<a name="fx-span" color="green">
-### `fx-span([cols=12], [float=left])`
-</a>
+## <a name="a15"></a> fx-span([cols=12], [float=left])
 
 
 
@@ -418,11 +401,10 @@ Dynamically add `$number` of columns to an element.
 Assumes a 12 column grid with no gutters (no gutters? that's right,
 using box-sizing:border-box on everything, wrappers for your grid classes
 and padding for inner content and things become much simpler in grid land).
+
 ***
 
-<a name="fx-underline-on-hover" color="green">
-### `fx-underline-on-hover([color=#000], [speed=0.3s])`
-</a>
+## <a name="a16"></a> fx-underline-on-hover([color=#000], [speed=0.3s])
 
 
 

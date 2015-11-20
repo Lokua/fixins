@@ -1,7 +1,7 @@
 {
   "name": "fixins",
   "version": "0.1.2",
-  "description": "Personal use collection of functions and mixins for use with precss and postcss-functions",
+  "description": "A collection of functions and mixins for use with precss and postcss-functions",
   "main": "index.js",
   "scripts": {
     "test": "ava test/**/*.test.js",

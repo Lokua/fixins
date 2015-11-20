@@ -11,14 +11,15 @@ const paths = [
 const functions = [];
 const mixins = [];
 const names = [];
-const docDelim = '\n***\n';
+const docDelim = '\n\n***\n';
+let a = 0;
 
 paths.forEach(dirpath => fs.readdirSync(dirpath).forEach(filename => {
   const source = fs.readFileSync(path.join(dirpath, filename), 'utf8');
   if (filename === 'colors.js') {
     names.push('+ Functions\n');
   } else if (filename === 'fx-ab.js') {
-    names.push('+ Mixins\n');
+    names.push('\n\n+ Mixins\n');
   }
   let docs = parseComments(source);
   if (dirpath.includes('functions')) {
@@ -49,7 +50,6 @@ fs.writeFile(__dirname + '/docs.md', out, 'utf8', err => {
   if (!err) console.log('docs written');
 });
 
-
 function parseComments(code) {
   const lines = code.split('\n');
   const docs = [];
@@ -64,14 +64,16 @@ function parseComments(code) {
         if (/^###\s`fx-.+`/.test(line)) {
           const anameMatch = line.match(/^###\s`([a-z-<>|]+)(?=\(.+)*|/);
           let aname = '';
-          if (anameMatch) {
-            aname = anameMatch[1];
-            if (/[<>]/.test(aname)) {
-              aname = aname.replace(/[<>]/g, '');
-            }
-            names.push(aname);
-          };
-          line = `\n<a name="${aname}" color="green">\n${line}\n</a>\n`;
+          if (!anameMatch) throw Error('no aname match');
+          aname = anameMatch[1];
+          if (/[<>]/.test(aname)) {
+            aname = aname.replace(/[<>]/g, '');
+          }
+          names.push(aname);
+          // line = `\n<a name="${a}" color="green">\n${line}\n</a>\n`;
+          line = line.replace('###', '').replace(/`/g, '');
+          line = `\n## <a name="a${a}"></a>${line}\n`;
+          a++;
         }
         if (line === '*') line = '\n';
         doc.push(line);
@@ -85,10 +87,12 @@ function parseComments(code) {
 
 function linkifyNames() {
   const ret = [];
-  for (let n of names) {
-    if (n.startsWith('+')) ret.push(n);
-    else ret.push(`  + [${n}](#${n})`);
-  }
+  let i = 0;
+  names.forEach(n => {
+    if (n.startsWith('+') || n.startsWith('\n\n+')) return ret.push(n);
+    ret.push(`  + [${n}](#a${i})`);
+    i++;
+  });
   return ret;
 }
 
